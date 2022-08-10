@@ -1,0 +1,43 @@
+@use "/src/styles/colors";
+
+.home-c {
+  min-height: 100vh;
+  padding: 1.5rem;
+
+  & section {
+    margin-bottom: 1rem;
+  }
+}
+
+.home__section-main-c {
+  & > * {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.sector-main__title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: colors.$text2;
+}
+
+.sector-main__desc {
+  color: colors.$text2;
+  font-size: 1.37rem;
+}
+
+.sector-main__btns-c {
+  display: flex;
+  margin-bottom: 2rem;
+
+  & a:first-of-type {
+    margin-right: 0.8rem;
+  }
+}
+
+.main__img-c {
+  img {
+    width: 100%;
+  }
+}

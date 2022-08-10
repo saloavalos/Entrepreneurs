@@ -1,4 +1,4 @@
-@use "./_variables.scss" as variables;
+@use "./colors.scss";
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 }
 // Change Background Color while Highlighting a Text
 *::selection {
-  background-color: variables.$blue;
+  background-color: colors.$blue;
 }
 
 // to enable smooth scrolling for the whole page

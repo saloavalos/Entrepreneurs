@@ -1,0 +1,28 @@
+@use "/src/styles/colors";
+
+.footer-container {
+  background-color: colors.$blue;
+  padding: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    padding: 1.5rem;
+  }
+}
+
+.footer-copyright-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: colors.$lightBlue;
+  cursor: default;
+
+  @media (min-width: 375px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.1rem;
+  }
+}
