@@ -25,8 +25,8 @@ export default () => {
       </section>
       <section className="home__section-people-c">
         <h2>Our entrepreneurs</h2>
-        <p>Lorem, ipsum dolor Lorem, ipsum dolor.</p>
-        <button>View all</button>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <CustomButton type="primary">View all</CustomButton>
       </section>
     </div>
   );
