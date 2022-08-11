@@ -1,26 +1,30 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Results from "./pages/Results";
+import Entrepreneurs from "./pages/entrepreneurs";
 import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const [count, setCount] = useState(0);
 
+  const location = useLocation();
+
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/results" element={<Results />} />
-        <Route path="/results/:profile" element={<Profile />} />
+        <Route path="/entrepreneurs" element={<Entrepreneurs />} />
+        <Route path="/entrepreneurs/:profile" element={<Profile />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
-    </div>
+
+      {/* if is a unkown page */}
+      {location.key !== "default" && <Footer />}
+    </>
   );
 }
 
