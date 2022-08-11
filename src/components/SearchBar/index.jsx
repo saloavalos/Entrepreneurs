@@ -17,7 +17,7 @@ export default () => {
 
       <div
         className={`search-bar-dialog-c ${
-          isDialogOpened && "search-bar-dialog--visible"
+          isDialogOpened && "search-bar-dialog--active"
         }`}
         onClick={handleCloseDialog}
       >

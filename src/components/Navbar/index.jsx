@@ -53,14 +53,20 @@ export default () => {
           </button>
         </div>
 
-        <ul className="navbar-menu">
-          {menuSections.map((item) => (
-            <li key={item.title}>
-              <div className="navbar-menu__item__active"></div>
-              <Link to={item.url}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <div
+          className={`navbar-menu ${
+            isMobileMenuActive && "navbar-menu--active"
+          }`}
+        >
+          <ul className={"navbar-menu-list"}>
+            {menuSections.map((item) => (
+              <li key={item.title}>
+                <div className="navbar-menu__item__active"></div>
+                <Link to={item.url}>{item.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

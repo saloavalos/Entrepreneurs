@@ -2,6 +2,9 @@
 
 .navbar-main-c {
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .navbar-sub-c {
@@ -25,4 +28,102 @@
   & > button:last-of-type {
     margin-left: 1rem;
   }
+}
+
+// Burger menu
+.navbar__burger-menu {
+  display: flex;
+  z-index: 99;
+  align-items: flex-end;
+  height: 1.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  .burger-menu__lines {
+    height: 3.06px;
+    background: colors.$text;
+    // transition: all 0.2s ease-in;
+    transition: all 200ms ease-in;
+  }
+
+  .burger-menu__line1 {
+    width: 11.21px;
+    border-radius: 25px 0 0 0;
+    // this was the first way I found to replicate the design I wanted
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  .burger-menu__line1--x {
+    // this was the first way I found to replicate the design I wanted
+    // transform: matrix(-0.71, 0.71, 0.71, 0.71, -2, 3);
+    transform: rotate(135deg) translate(3px, -1px);
+  }
+
+  .burger-menu__line2 {
+    width: 30.57px;
+    // If I use this line below it seems like this burger line is higher than the other even though the hight is the same
+    // border-radius: 25px 0 0 0;
+    border-radius: 0 0 0 25px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  .burger-menu__line2--x {
+    transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+    // transform: rotate(45deg) translate(0, 0);
+  }
+
+  .burger-menu__line3 {
+    width: 22.42px;
+    border-radius: 25px 0 0 0;
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  .burger-menu__line3--x {
+    // transform: matrix(0.71, -0.71, -0.71, -0.71, -13, -8);
+    transform: rotate(-45deg) translate(-5px, -13px);
+  }
+}
+// Burger Menu -- end
+
+.navbar-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.navbar-menu-list {
+  position: sticky;
+  padding: 1rem;
+  background-color: white;
+
+  & > li {
+    list-style: none;
+    margin-top: 1rem;
+
+    a {
+      text-decoration: none;
+      color: colors.$text2;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.navbar-menu--active {
+  visibility: visible;
+  max-height: 100vh;
 }
