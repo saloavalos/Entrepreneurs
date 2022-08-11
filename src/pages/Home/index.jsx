@@ -24,9 +24,12 @@ export default () => {
         </div>
       </section>
       <section className="home__section-people-c">
-        <h2>Our entrepreneurs</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <CustomButton type="primary">View all</CustomButton>
+        <h2 className="people__title">Our entrepreneurs</h2>
+        <p className="people__desc">Lorem ipsum dolor sit amet consectetur.</p>
+
+        <CustomButton type="primary" to="/entrepreneurs">
+          View all profiles
+        </CustomButton>
       </section>
     </div>
   );

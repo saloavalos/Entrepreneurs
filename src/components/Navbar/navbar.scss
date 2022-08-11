@@ -26,14 +26,13 @@
   align-items: center;
 
   & > button:last-of-type {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 }
 
 // Burger menu
 .navbar__burger-menu {
   display: flex;
-  z-index: 99;
   align-items: flex-end;
   height: 1.75rem;
   flex-direction: column;
@@ -107,12 +106,15 @@
 
 .navbar-menu-list {
   position: sticky;
-  padding: 1rem;
   background-color: white;
+  padding: 1.5rem;
+
+  & > li:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
 
   & > li {
     list-style: none;
-    margin-top: 1rem;
 
     a {
       text-decoration: none;

@@ -3,7 +3,6 @@
 .btn {
   font-size: 1.1rem;
   font-weight: 600;
-  display: flex;
   text-decoration: none;
 }
 
@@ -22,6 +21,7 @@
 }
 
 .secondary-btn {
+  display: flex;
   align-items: center;
 
   svg {

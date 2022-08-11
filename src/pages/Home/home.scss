@@ -41,3 +41,21 @@
     width: 100%;
   }
 }
+
+.home__section-people-c {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.people__title {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.85rem;
+  color: colors.$text2;
+  margin-bottom: 0.5rem;
+}
+
+.people__desc {
+  color: colors.$text2;
+  font-size: 1.37rem;
+  margin-bottom: 2rem;
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Arrow from "../../assets/icons/Arrow.jsx";
 import "./customButton.scss";
 
-export default ({ children, type, color }) => {
+export default ({ children, type, color, to }) => {
   const buttonColors = ["btn-blue", "btn-black"];
 
   const checkButtonColor = buttonColors.includes(color)
@@ -12,7 +12,7 @@ export default ({ children, type, color }) => {
 
   return (
     <Link
-      to="/"
+      to={to ? to : ""}
       className={`btn ${
         type === "primary" ? "primary-btn" : "secondary-btn"
       } ${checkButtonColor}`}

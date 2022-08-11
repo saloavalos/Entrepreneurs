@@ -2,6 +2,11 @@
 
 .search-bar-main-c {
   display: flex;
+
+  & > svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .search-bar-dialog-c {
@@ -12,9 +17,9 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem;
+  z-index: 99;
   visibility: hidden;
   opacity: 0;
-  transition: 0.1s opacity ease-out;
 }
 
 .search-bar-dialog__content {
@@ -28,6 +33,8 @@
   justify-content: space-between;
   margin-bottom: 1.1rem;
   font-size: 1.1rem;
+  font-weight: 600;
+  color: colors.$text2;
 }
 
 .search-bar-c {
