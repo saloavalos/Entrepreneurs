@@ -24,16 +24,24 @@
   }
 }
 
+.people-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .each-person-c {
   background-color: white;
   border-radius: 10px;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   margin-bottom: 3rem;
+  //   margin: 0 1rem 3rem 1rem;
+  max-width: 24rem;
 }
 
 .each-person__profile-img-c {
-  min-height: 16rem;
+  min-height: 10rem;
   background-color: lightgray;
   overflow: hidden;
   display: flex;
@@ -48,4 +56,29 @@
 
 .each-person__data {
   padding: 1rem;
+
+  p {
+    color: colors.$text2;
+  }
+
+  & p:first-of-type {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: colors.$yellow;
+  }
+}
+
+.each-person-link {
+  text-decoration: none;
 }
