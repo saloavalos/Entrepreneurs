@@ -1,0 +1,44 @@
+@use "/src/styles/colors";
+
+.entrepreneurs-c {
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.entrepreneurs__title-c {
+  margin-bottom: 3rem;
+
+  p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: colors.$text2;
+    margin-bottom: 1rem;
+  }
+
+  span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.43rem;
+    color: colors.$text2;
+  }
+}
+
+.each-person-c {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+  margin-bottom: 2rem;
+}
+
+.each-person__profile-img-c {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.each-person__data {
+  padding: 1rem;
+}

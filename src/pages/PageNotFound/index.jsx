@@ -4,7 +4,7 @@ import "./pageNotFound.scss";
 export default () => {
   return (
     <div className="page-not-found-c">
-      <div>
+      <div className="page-not-found-content-c">
         <p>Error 404 😓</p>
         <span>Something weird happened, keep trying.</span>
       </div>

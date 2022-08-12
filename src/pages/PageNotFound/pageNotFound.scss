@@ -5,4 +5,27 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.page-not-found-content-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: colors.$text2;
+    margin-bottom: 1rem;
+  }
+
+  span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.43rem;
+    color: colors.$text2;
+    max-width: 85%;
+  }
 }
