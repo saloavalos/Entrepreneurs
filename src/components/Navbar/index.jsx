@@ -30,7 +30,11 @@ export default () => {
   return (
     <nav className="navbar-main-c">
       <div className="navbar-sub-c">
-        <Link to="/" className="navbar-logo-c">
+        <Link
+          to="/"
+          className="navbar-logo-c"
+          onClick={() => setIsMobileMenuActive(false)}
+        >
           <img src={logo} alt="logo" />
         </Link>
 
@@ -59,12 +63,20 @@ export default () => {
           className={`navbar-menu ${
             isMobileMenuActive && "navbar-menu--active"
           }`}
+          onClick={handleToggleMenu}
         >
-          <ul className={"navbar-menu-list"}>
+          <ul
+            className={"navbar-menu-list"}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             {menuSections.map((item) => (
-              <li key={item.title} onClick={handleToggleMenu}>
+              <li key={item.title}>
                 <div className="navbar-menu__item__active"></div>
-                <Link to={item.url}>{item.title}</Link>
+                <Link to={item.url} onClick={handleToggleMenu}>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>

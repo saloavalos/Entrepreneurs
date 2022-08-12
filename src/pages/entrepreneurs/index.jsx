@@ -19,7 +19,7 @@ export default () => {
   return (
     <div className="entrepreneurs-c">
       <div className="entrepreneurs__title-c">
-        <p>Lorem, ipsum dolor 👌</p>
+        <p>Lorem, ipsum 👌</p>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
       </div>
       <div className="people-c">
