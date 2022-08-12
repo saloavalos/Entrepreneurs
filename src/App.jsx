@@ -22,7 +22,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 
-      {/* if is a unkown page */}
+      {/* if it's a unkown page */}
       {location.key !== "default" && <Footer />}
     </>
   );

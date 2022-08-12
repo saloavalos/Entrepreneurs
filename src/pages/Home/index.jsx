@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.scss";
 import teamWorking from "../../assets/images/studio-team.jpg";
 import CustomButton from "../../components/CustomButton";
 
 export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home-c">
       <section className="home__section-main-c">

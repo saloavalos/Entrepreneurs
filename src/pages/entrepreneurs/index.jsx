@@ -8,6 +8,8 @@ export default () => {
   const [entrepreneurs, setEntrepreneurs] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => setEntrepreneurs(response.data))

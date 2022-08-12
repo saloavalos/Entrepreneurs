@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../../favicon.svg";
 import "./navbar.scss";
 import SearchBar from "../SearchBar";
+import { useEffect } from "react";
 
 export default () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -22,6 +23,10 @@ export default () => {
     },
   ];
 
+  const handleToggleMenu = () => {
+    setIsMobileMenuActive(!isMobileMenuActive);
+  };
+
   return (
     <nav className="navbar-main-c">
       <div className="navbar-sub-c">
@@ -31,10 +36,7 @@ export default () => {
 
         <div className="search-bar-and-burger-menu-c">
           <SearchBar />
-          <button
-            className="navbar__burger-menu"
-            onClick={() => setIsMobileMenuActive(!isMobileMenuActive)}
-          >
+          <button className="navbar__burger-menu" onClick={handleToggleMenu}>
             <span
               className={`burger-menu__lines burger-menu__line1 ${
                 isMobileMenuActive && "burger-menu__line1--x"
@@ -60,7 +62,7 @@ export default () => {
         >
           <ul className={"navbar-menu-list"}>
             {menuSections.map((item) => (
-              <li key={item.title}>
+              <li key={item.title} onClick={handleToggleMenu}>
                 <div className="navbar-menu__item__active"></div>
                 <Link to={item.url}>{item.title}</Link>
               </li>
