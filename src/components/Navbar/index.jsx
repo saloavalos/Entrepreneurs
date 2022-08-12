@@ -38,48 +38,50 @@ export default () => {
           <img src={logo} alt="logo" />
         </Link>
 
-        <div className="search-bar-and-burger-menu-c">
-          <SearchBar />
-          <button className="navbar__burger-menu" onClick={handleToggleMenu}>
-            <span
-              className={`burger-menu__lines burger-menu__line1 ${
-                isMobileMenuActive && "burger-menu__line1--x"
-              }`}
-            ></span>
-            <span
-              className={`burger-menu__lines burger-menu__line2 ${
-                isMobileMenuActive && "burger-menu__line2--x"
-              }`}
-            ></span>
-            <span
-              className={`burger-menu__lines burger-menu__line3 ${
-                isMobileMenuActive && "burger-menu__line3--x"
-              }`}
-            ></span>
-          </button>
-        </div>
+        <div className="search-and-menu-c">
+          <div className="search-bar-and-burger-menu-c">
+            <SearchBar />
+            <button className="navbar__burger-menu" onClick={handleToggleMenu}>
+              <span
+                className={`burger-menu__lines burger-menu__line1 ${
+                  isMobileMenuActive && "burger-menu__line1--x"
+                }`}
+              ></span>
+              <span
+                className={`burger-menu__lines burger-menu__line2 ${
+                  isMobileMenuActive && "burger-menu__line2--x"
+                }`}
+              ></span>
+              <span
+                className={`burger-menu__lines burger-menu__line3 ${
+                  isMobileMenuActive && "burger-menu__line3--x"
+                }`}
+              ></span>
+            </button>
+          </div>
 
-        <div
-          className={`navbar-menu ${
-            isMobileMenuActive && "navbar-menu--active"
-          }`}
-          onClick={handleToggleMenu}
-        >
-          <ul
-            className={"navbar-menu-list"}
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
+          <div
+            className={`navbar-menu ${
+              isMobileMenuActive && "navbar-menu--active"
+            }`}
+            onClick={handleToggleMenu}
           >
-            {menuSections.map((item) => (
-              <li key={item.title}>
-                <div className="navbar-menu__item__active"></div>
-                <Link to={item.url} onClick={handleToggleMenu}>
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+            <ul
+              className={"navbar-menu-list"}
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              {menuSections.map((item) => (
+                <li key={item.title}>
+                  <div className="navbar-menu__item__active"></div>
+                  <Link to={item.url} onClick={handleToggleMenu}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
