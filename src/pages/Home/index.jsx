@@ -11,18 +11,21 @@ export default () => {
   return (
     <div className="home-c">
       <section className="home__section-main-c">
-        <h2 className="sector-main__title">
-          Expand your community
-          {/* Expand your creativity
+        <div className="section-main__text-c">
+          <h2 className="sector-main__title">
+            Expand your community
+            {/* Expand your creativity
           Expand your knowledge */}
-        </h2>
-        <p className="sector-main__desc">
-          Explore and get in contact with more entrepreneurs just like you.
-        </p>
-        <div className="sector-main__btns-c">
-          <CustomButton type="primary">Join us</CustomButton>
-          <CustomButton type="secondary">See how it works</CustomButton>
+          </h2>
+          <p className="sector-main__desc">
+            Explore and get in contact with more entrepreneurs just like you.
+          </p>
+          <div className="sector-main__btns-c">
+            <CustomButton type="primary">Join us</CustomButton>
+            <CustomButton type="secondary">See how it works</CustomButton>
+          </div>
         </div>
+
         <div className="main__img-c">
           <img src={teamWorking} alt="Team working" />
         </div>

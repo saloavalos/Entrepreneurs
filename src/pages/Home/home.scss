@@ -3,6 +3,10 @@
 .home-c {
   min-height: 100vh;
   padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 
   & section {
     margin-bottom: 1rem;
@@ -10,9 +14,11 @@
 }
 
 .home__section-main-c {
-  & > * {
-    margin-bottom: 1.2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 90rem;
 }
 
 .sector-main__title {
@@ -25,11 +31,13 @@
 .sector-main__desc {
   color: colors.$text2;
   font-size: 1.37rem;
+  width: 100%;
 }
 
 .sector-main__btns-c {
   display: flex;
   margin-bottom: 2rem;
+  width: 100%;
 
   & a:first-of-type {
     margin-right: 0.8rem;
@@ -37,6 +45,11 @@
 }
 
 .main__img-c {
+  @media (min-width: 768px) {
+    width: 45%;
+    max-width: 38rem;
+  }
+
   img {
     width: 100%;
   }
@@ -45,6 +58,10 @@
 .home__section-people-c {
   margin-top: 3rem;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 8rem;
+  }
 }
 
 .people__title {
@@ -58,4 +75,19 @@
   color: colors.$text2;
   font-size: 1.37rem;
   margin-bottom: 2rem;
+}
+
+.section-main__text-c {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  & > * {
+    margin-bottom: 1.2rem;
+  }
 }
