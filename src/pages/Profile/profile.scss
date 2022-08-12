@@ -3,3 +3,106 @@
 .entrepreneur-profile-c {
   min-height: 100vh;
 }
+
+.profile__banner-and-profile-photo-c {
+  margin-bottom: 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile__user-photo-c {
+  border: 4px solid white;
+  border-radius: 100%;
+  width: 8rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -40%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.profile__all-text-c {
+  padding: 0 1.5rem;
+}
+
+.profile__username-c {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: colors.$text2;
+
+  p {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
+
+.profile__main-actions-btns-c {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  & a:first-of-type {
+    margin-right: 1.5rem;
+  }
+}
+
+.profile__company-c {
+  color: colors.$text2;
+  margin-bottom: 1.5rem;
+
+  p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: colors.$yellow;
+  }
+}
+
+.profile-subtitle {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-desc {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile__about-me-c {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile__extra-info_title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.profile__extra-info-c {
+  border: 1px solid colors.$lightBlue;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+
+  & > div:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
