@@ -21,6 +21,8 @@
   z-index: 99;
   visibility: hidden;
   opacity: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .search-bar-dialog__content {
@@ -29,6 +31,8 @@
   border-radius: 10px;
   height: 100%;
   overflow-y: hidden;
+  max-width: 35rem;
+  width: 100%;
 }
 
 .search-bar__top-content-c {
@@ -44,6 +48,10 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: colors.$text2;
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .search-bar-c {
@@ -72,7 +80,7 @@
 }
 
 .search-bar-dialog-results-c {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 80%;
   padding: 0.8rem;
   margin-top: 1.2rem;
