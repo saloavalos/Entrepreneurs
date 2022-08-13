@@ -53,7 +53,7 @@ export default () => {
             e.stopPropagation();
           }}
         >
-          <div className="search-bar__top-content-c">
+          <div className="search-bar__top-content__title">
             <p>Find your connection</p>
             <CloseIcon onClick={handleCloseDialog} />
           </div>
@@ -89,6 +89,11 @@ export default () => {
                   </div>
                 </div>
               ))}
+            {searchResults.length === 0 && searchInput && (
+              <div className="search-dialog-not-found-c">
+                <p>We couldn't find anything 😑</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
