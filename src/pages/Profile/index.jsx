@@ -6,8 +6,6 @@ import "./profile.scss";
 
 export default () => {
   const [profileData, setProfileData] = useState();
-  const randomIDBanner = Math.floor(Math.random() * 101);
-  const randomIDProfile = Math.floor(Math.random() * 101);
 
   let params = useParams();
 
@@ -24,16 +22,10 @@ export default () => {
       {profileData && (
         <div className="entrepreneur-profile-c">
           <div className="profile__banner-c">
-            <img
-              src={`https://picsum.photos/id/${randomIDBanner}/1000/400`}
-              alt=""
-            />
+            <img src={`https://picsum.photos/1000/400`} alt="" />
           </div>
           <div className="profile__user-photo-c">
-            <img
-              src={`https://picsum.photos/id/${randomIDProfile}/200/200`}
-              alt="Profile photo"
-            />
+            <img src={`https://picsum.photos/200/200`} alt="Profile photo" />
           </div>
 
           <div className="profile__all-info-c">

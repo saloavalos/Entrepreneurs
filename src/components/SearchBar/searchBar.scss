@@ -51,6 +51,7 @@
   }
 
   input {
+    width: 100%;
     outline: none;
     font-size: 1rem;
     border: none;
@@ -60,4 +61,27 @@
 .search-bar-dialog--active {
   visibility: visible;
   opacity: 1;
+}
+
+.search-bar-dialog-results-c {
+}
+
+.search-bar-dialog__each-result-c {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.search-bar-dialog-each-result__img-c {
+  width: 4rem;
+  height: 4rem;
+  border: 4px solid white;
+  margin-right: 0.5rem;
+
+  img {
+    border-radius: 100%;
+    width: 100%;
+    background-color: lightgrey;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 }
