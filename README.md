@@ -13,6 +13,13 @@ Web app - Testing JSONPlaceholder API
 ## A preview of the project
 
 ![Main-pages](readme_assets/main-pages.png "Main pages")
+![Home](readme_assets/home.png "Home")
+![Entrepreneurs](readme_assets/entrepreneurs.png "Entrepreneurs")
+![Profile](readme_assets/profile.png "Profile")
+
+#
+
+_`Search functionality has not been implemented yet`_
 
 #
 
