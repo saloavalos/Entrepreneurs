@@ -48,6 +48,7 @@
 
 .each-person__profile-img-c {
   min-height: 10rem;
+  max-height: 14rem;
   background-color: lightgray;
   overflow: hidden;
   display: flex;
@@ -69,12 +70,12 @@
 
   & p:first-of-type {
     font-family: "Rubik", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
   }
 
   & p:nth-child(2) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   span {

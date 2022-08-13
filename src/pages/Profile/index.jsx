@@ -5,27 +5,41 @@ import CustomButton from "../../components/CustomButton";
 import "./profile.scss";
 
 export default () => {
-  const [profileData, setProfileData] = useState();
+  const [profileData, setProfileData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   let params = useParams();
 
-  useEffect(() => {
-    axios
+  const getUserData = async () => {
+    const data = await axios
       .get(`https://jsonplaceholder.typicode.com/users/${params.profileID}`)
-      .then((response) => setProfileData(response.data))
       .catch((error) => console.log("Unable to get data 🤦‍♂️"));
-  }, []);
+
+    setProfileData(data.data);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+    getUserData();
+  }, [params]);
 
   return (
     <>
-      {!profileData && <div>Loading...</div>}
-      {profileData && (
+      {isLoading && <div>Loading...</div>}
+      {!isLoading && (
         <div className="entrepreneur-profile-c">
           <div className="profile__banner-c">
-            <img src={`https://picsum.photos/1000/400`} alt="" />
+            <img
+              src={`https://picsum.photos/id/${profileData.id * 20}/1000/400`}
+              alt=""
+            />
           </div>
           <div className="profile__user-photo-c">
-            <img src={`https://picsum.photos/200/200`} alt="Profile photo" />
+            <img
+              src={`https://picsum.photos/id/${profileData.id}/200/200`}
+              alt="Profile photo"
+            />
           </div>
 
           <div className="profile__all-info-c">

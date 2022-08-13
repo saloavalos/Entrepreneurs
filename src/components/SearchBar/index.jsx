@@ -4,6 +4,7 @@ import CloseIcon from "../../assets/icons/Close";
 import "./searchBar.scss";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default () => {
   const [isDialogOpened, setIsDialogOpened] = useState(false);
@@ -62,6 +63,7 @@ export default () => {
             <input
               type="text"
               placeholder="Search here..."
+              value={searchInput}
               onChange={(e) => handleSearch(e.target.value)}
             />
           </div>
@@ -69,25 +71,27 @@ export default () => {
           <div className="search-bar-dialog-results-c">
             {searchInput.length > 0 &&
               searchResults.map((eachResult) => (
-                <div
-                  className="search-bar-dialog__each-result-c"
+                <Link
+                  to={`/entrepreneurs/${eachResult.id}`}
                   key={eachResult.id}
+                  onClick={() => {
+                    handleCloseDialog();
+                    setSearchInput("");
+                  }}
                 >
-                  <div className="search-bar-dialog-each-result__img-c">
-                    <img
-                      src="https://picsum.photos/80/80"
-                      alt="Profile photo"
-                    />
+                  <div className="search-bar-dialog__each-result-c">
+                    <div className="search-bar-dialog-each-result__img-c">
+                      <img
+                        src={`https://picsum.photos/id/${eachResult.id}/80/80`}
+                        alt="Profile photo"
+                      />
+                    </div>
+                    <div className="search-bar-dialog-each-result__text-c">
+                      <p>{eachResult?.name}</p>
+                      <p>{eachResult?.company?.name}</p>
+                    </div>
                   </div>
-                  <div className="search-bar-dialog-each-result__text-c">
-                    <p>
-                      Name: <span>{eachResult?.name}</span>
-                    </p>
-                    <p>
-                      Company: <span>{eachResult?.company?.name}</span>
-                    </p>
-                  </div>
-                </div>
+                </Link>
               ))}
             {searchResults.length === 0 && searchInput && (
               <div className="search-dialog-not-found-c">

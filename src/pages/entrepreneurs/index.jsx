@@ -36,7 +36,7 @@ export default () => {
                 <div className="each-person-c">
                   <div className="each-person__profile-img-c">
                     <img
-                      src="https://picsum.photos/id/0/400/300"
+                      src={`https://picsum.photos/id/${eachEntrepreneur.id}/400/300`}
                       alt="Profile"
                     />
                   </div>

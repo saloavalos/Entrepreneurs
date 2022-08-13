@@ -74,16 +74,20 @@
 .search-bar-dialog-results-c {
   overflow-y: scroll;
   height: 80%;
-  padding: 0.5rem;
+  padding: 0.8rem;
   margin-top: 1.2rem;
   border: 2px solid colors.$lightBlue;
   border-radius: 10px;
 
-  & > div:not(:first-of-type) {
+  & a > div:not(:first-of-type) {
     margin-top: 1rem;
   }
-  & > div:last-of-type {
-    margin-bottom: 1rem;
+  & a > div:last-of-type {
+    margin-bottom: 0.5rem;
+  }
+
+  > a {
+    text-decoration: none;
   }
 }
 
@@ -95,7 +99,7 @@
 .search-bar-dialog-each-result__img-c {
   width: 4rem;
   height: 4rem;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 
   img {
     border: 4px solid white;
@@ -109,4 +113,18 @@
 .search-dialog-not-found-c {
   display: flex;
   justify-content: center;
+}
+
+.search-bar-dialog-each-result__text-c {
+  & p:first-of-type {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.1rem;
+    color: colors.$text2;
+  }
+
+  & p:nth-child(2) {
+    font-size: 1rem;
+    color: colors.$yellow;
+  }
 }
