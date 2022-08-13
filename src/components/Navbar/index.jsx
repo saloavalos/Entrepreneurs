@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../favicon.svg";
 import "./navbar.scss";
 import SearchBar from "../SearchBar";
-import { useEffect } from "react";
 
 export default () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
 
   const menuSections = [
     {
@@ -27,8 +27,24 @@ export default () => {
     setIsMobileMenuActive(!isMobileMenuActive);
   };
 
+  useEffect(() => {
+    const onScrollDown = (e) => {
+      if (window.scrollY > 0) {
+        setIsScrolledDown(true);
+      } else {
+        setIsScrolledDown(false);
+      }
+    };
+    window.addEventListener("scroll", onScrollDown);
+
+    // cleanup
+    return () => {
+      window.removeEventListener("scroll", onScrollDown);
+    };
+  }, []);
+
   return (
-    <nav className="navbar-main-c">
+    <nav className={`navbar-main-c ${isScrolledDown && "navbar-shadow"}`}>
       <div className="navbar-sub-c">
         <Link
           to="/"
